@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Loader from '../layout/Loader';
+import EditIcon from '@mui/icons-material/Edit';
 
 const Profile = () => {
     const {user, loading} = useSelector((state) => state.auth);
@@ -29,7 +30,7 @@ const Profile = () => {
                 <Link to="/users/me/update"
                 id="edit_profile"
                 className="btn btn-primary btn-block my-5">
-                Edit Profile
+                Edit Profile <EditIcon />
                 </Link>
                 <h4>Full Name:</h4>
                 <p>{user.name}</p>

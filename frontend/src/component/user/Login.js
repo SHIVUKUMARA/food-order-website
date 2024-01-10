@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login, clearErrors } from "../../actions/userActions";
 import VisibilityIcon from '@mui/icons-material/Visibility'; 
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import LoginIcon from '@mui/icons-material/Login';
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -53,6 +54,7 @@ const Login = () => {
                     type="email"
                     id="email_field"
                     className="form-control"
+                    placeholder="Enter your Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   ></input>
@@ -63,6 +65,7 @@ const Login = () => {
                     type={show?"text":"password"}
                     id="password_field"
                     className="form-control"
+                    placeholder="Enter your password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   ></input>
@@ -76,7 +79,7 @@ const Login = () => {
                   type="submit"
                   className="btn btn-block py3"
                 >
-                  LOGIN
+                  LOGIN <LoginIcon />
                 </button>
 
                 <Link to="/users/signup" className="float-right mt-3">

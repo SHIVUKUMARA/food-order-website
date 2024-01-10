@@ -95,7 +95,7 @@ nav {
   border-radius: 0.2rem;
   color: rgb(2, 2, 2);
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 /* Home page */
@@ -929,4 +929,58 @@ ul.CTAs a {
   padding-top: 393px;
   top: 1%;
   right:15%
+}
+
+.hideAndShow_3{
+  position: absolute;
+  padding-top: 305px;
+  top: 1%;
+  right:15%
+}
+
+.logo1{
+  position: absolute;
+  right: 15%;
+}
+
+
+.logo2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+  align-content: center;
+}
+
+.socialmedia{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  align-content: center;
+}
+
+.footerline1{
+  width: 82%;
+  background-color: #807a7a;
+}
+
+.new1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.new2{
+  font-weight: bold;
+  padding-top: 2px;
 }

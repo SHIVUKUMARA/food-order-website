@@ -7,6 +7,7 @@ import CheckoutSteps from "./CheckoutSteps";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons";
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
 const ConfirmOrder = () => {
   const { cartItems, deliveryInfo } = useSelector((state) => state.cart);
@@ -134,7 +135,7 @@ const ConfirmOrder = () => {
               className="btn btn-primary btn-block"
               onClick={processToPayment}
             >
-              Proceed to Payment
+              Proceed to Payment <AccountBalanceWalletIcon fontSize="small"/>
             </button>
             <br />
           </div>

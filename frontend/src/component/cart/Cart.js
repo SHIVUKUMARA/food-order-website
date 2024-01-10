@@ -9,6 +9,7 @@ import {
 } from "../../actions/cartActions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIndianRupee } from "@fortawesome/free-solid-svg-icons";
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -168,7 +169,7 @@ const Cart = () => {
                   className="btn btn-primary btn-block"
                   onClick={checkoutHandler}
                 >
-                  Check Out
+                  Check Out <ArrowRightAltIcon />
                 </button>
               </div>
             </div>

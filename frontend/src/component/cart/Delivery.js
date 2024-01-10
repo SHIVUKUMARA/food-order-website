@@ -47,6 +47,7 @@ const Delivery = () => {
                 type="text"
                 id="address_field"
                 className="form-control"
+                placeholder="House name, & no."
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
                 required
@@ -60,6 +61,7 @@ const Delivery = () => {
                 type="text"
                 id="city_field"
                 className="form-control"
+                placeholder="Enter your City"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
                 required
@@ -72,6 +74,7 @@ const Delivery = () => {
                 type="phone"
                 id="phone_field"
                 className="form-control"
+                placeholder="Phone no."
                 value={phoneNo}
                 onChange={(e) => setPhoneNo(e.target.value)}
                 required
@@ -84,6 +87,7 @@ const Delivery = () => {
                 type="number"
                 id="postal_code_field"
                 className="form-control"
+                placeholder="Enter Postal code"
                 value={postalCode}
                 onChange={(e) => setPostalCode(e.target.value)}
                 required

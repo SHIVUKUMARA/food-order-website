@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useAlert } from "react-alert";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { register, clearErrors } from "../../actions/userActions";
 import VisibilityIcon from '@mui/icons-material/Visibility'; 
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import LoginIcon from '@mui/icons-material/Login';
 
 
 const Register = () => {
@@ -93,6 +95,7 @@ const Register = () => {
                 type="text"
                 id="name_field"
                 className="form-control"
+                placeholder="Enter your Name"
                 name="name"
                 value={name}
                 onChange={onChange}
@@ -104,6 +107,7 @@ const Register = () => {
                 type="email"
                 id="email_field"
                 className="form-control"
+                placeholder="Enter a valid Email"
                 name="email"
                 value={email}
                 onChange={onChange}
@@ -112,25 +116,28 @@ const Register = () => {
             <div className="form-group">
               <label htmlFor="password_field">Password</label>
               <input
-                type="password"
+                type={show?"text":"password"}
                 id="password_field"
                 className="form-control"
+                placeholder="password should be >=8 character"
                 name="password"
                 value={password}
                 onChange={onChange}
               ></input>
+              <label className="hideAndShow_3" onClick={handleShow}>{show?<VisibilityOff />:<VisibilityIcon />}</label>
             </div>
             <div className="form-group">
-              <label htmlFor="passwordConfirm_field">Password Confirm</label>
+              <label htmlFor="passwordConfirm_field">Confirm Password</label>
               <input
                 type={show?"text":"password"}
                 id="passwordConfirm_field"
                 className="form-control"
+                placeholder="Re-enter your password"
                 name="passwordConfirm"
                 value={passwordConfirm}
                 onChange={onChange}
               ></input>
-              <label className="hideAndShow_2" onClick={handleShow}>{show?<VisibilityOff />:<VisibilityIcon />}</label>
+              {/* <label className="hideAndShow_2" onClick={handleShow}>{show?<VisibilityOff />:<VisibilityIcon />}</label> */}
             </div>
             <div className="form-group">
               <label htmlFor="phoneNumber_field">Phone Number</label>
@@ -138,6 +145,7 @@ const Register = () => {
                 type="number"
                 id="phoneNumber_field"
                 className="form-control"
+                placeholder="Enter your Ph no:"
                 name="phoneNumber"
                 value={phoneNumber}
                 onChange={onChange}
@@ -170,6 +178,7 @@ const Register = () => {
                 </div>
               </div>
             </div>
+            
 
             <button
               id="register_button"
@@ -177,8 +186,13 @@ const Register = () => {
               className="btn btn-block py-3"
               disabled={loading ? true : false}
             >
-              REGISTER
+              REGISTER <LoginIcon />
             </button>
+            <label className="new1">Already have an account ?
+              <Link to="/users/login" className="new2">
+                Login
+              </Link> 
+            </label>
           </form>
         </div>
       </div>

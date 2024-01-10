@@ -85,8 +85,7 @@ const ListOrders = () => {
           .map((item) => item.name)
           .join(",");
 
-        const restaurant = restaurantList.find(
-          (restaurant) => restaurant._id.toString() === order.restaurant._id
+        const restaurant = restaurantList.find((restaurant) => restaurant._id.toString() === order.restaurant._id
         );
         data.rows.push({
           restaurant: restaurant?.name || "Unknown Restaurant",

@@ -3,6 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, Route, Routes } from "react-router-dom";
 import { useAlert } from "react-alert";
 import { logout } from "../../actions/userActions";
+import LoginIcon from '@mui/icons-material/Login';
+import LogoutIcon from '@mui/icons-material/Logout';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ShoppingCartCheckoutOutlinedIcon from '@mui/icons-material/ShoppingCartCheckoutOutlined';
+import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
+
 
 import Search from "./Search";
 import "../../App.css";
@@ -44,7 +50,7 @@ const Header = () => {
           {/* ml-> margin left (3unit from left) */}
           <Link to="/cart" style={{ textDecoration: "none" }}>
             <span className="ml-3" id="cart">
-              Cart
+              <AddShoppingCartOutlinedIcon />
             </span>
             <span className="ml-1" id="cart_count">
               {cartItems.length}
@@ -77,26 +83,26 @@ const Header = () => {
                 aria-labelledby="dropDownMenuButton"
               >
                 <Link className="dropdown-item" to="/eats/orders/me/myOrders">
-                  Orders
+                  Orders <ShoppingCartCheckoutOutlinedIcon className="logo1"/>
                 </Link>
-
+                 <hr width="80%"/>
                 <Link className="dropdown-item" to="/users/me">
-                  Profile
+                  Profile  <AccountCircleIcon className="logo1"/>
                 </Link>
-
+                 <hr width="80%"/>
                 <Link
                   className="dropdown-item text-danger"
                   to="/"
                   onClick={logoutHandler}
                 >
-                  Logout
+                  Logout<LogoutIcon className="logo1"/>
                 </Link>
               </div>
             </div>
           ) : (
             !loading && (
               <Link to="/users/login" className="btn ml-4" id="login_btn">
-                Login
+                Login<LoginIcon className="logo2"/>
               </Link>
             )
           )}
