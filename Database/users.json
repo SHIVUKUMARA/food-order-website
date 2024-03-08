@@ -2,8 +2,8 @@
   "_id": {
     "$oid": "64b8da25b292a8d6cfd139f2"
   },
-  "name": "Ritz",
-  "email": "richajha@gmail.com",
+  "name": "Developer",
+  "email": "developer@gmail.com",
   "password": "$2a$12$TxQb383gy1UVgBdu3Ll1p.6wpsr8qjuKCpgCtIkEJVAnCFDyoAfAu",
   "avatar": {
     "public_id": "avatars/uvyy6654ullorh142do4",
