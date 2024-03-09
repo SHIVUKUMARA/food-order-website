@@ -1,3 +1,6 @@
+# Add all this details in `backend/config/config.js file` 
+
+
 PORT = 4000
 
 NODE_ENV = DEVELOPMENT
